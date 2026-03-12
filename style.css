@@ -1,0 +1,94 @@
+/*set images*/
+*{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+h1{
+    background-color: #1B263B;
+    color: white;
+    height: 4rem;
+    line-height:4rem;
+}
+
+.choices{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:1.5rem;
+    margin-top: 2rem;
+}
+
+.choice{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+img{
+    height:110px;
+    width:110px;
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+/* set scoreboard*/
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+#user-score,#comp-score{
+    font-size: 3rem;
+}
+
+.msg-container{
+    margin-top: 4rem;
+}
+
+#msg{
+    color:white;
+    background-color: #1B263B;
+    display: inline;
+    font-size: 1.5rem;
+    padding:0.7rem;
+    border-radius: 0.8rem;
+}
+
+button{
+    border:none;
+    border-radius:1rem;
+    margin-top:2rem;
+    background-color: #778DA9;
+    font-size: 1.5rem;
+    height: 3rem;
+    width:10rem;
+}
+
+button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.signature {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    color: #1B263B;
+    font-size: 1.5rem; 
+    position: fixed;
+    bottom:2px;
+    right:20px;
+}
