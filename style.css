@@ -92,3 +92,57 @@ button:hover{
     bottom:2px;
     right:20px;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+/* This code only activates when the screen is 600px wide or smaller */
+
+@media (max-width: 600px) {
+    /* 1. Shrink the gap between the images and make them slightly smaller */
+    .choices {
+        gap: 0.5rem; 
+        margin-top: 1.5rem;
+    }
+
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    /* 2. Bring the scores closer together and reduce font size */
+    .scoreboard {
+        gap: 2rem; 
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2rem;
+    }
+
+    /* 3. Adjust spacing for the message and button */
+    .msg-container {
+        margin-top: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        display: inline-block; /* Forces the background to stay as one solid shape */
+        line-height: 1.5;      /* Adds a little breathing room between the two lines of text */
+        max-width: 90%;        /* Prevents the red/green box from touching the very edges of the screen */
+    }
+
+    button {
+        margin-top: 1.5rem;
+    }
+
+    /* 4. Make the signature smaller so it doesn't overlap other elements */
+    .signature {
+        font-size: 1.2rem;
+        right: 10px;
+    }
+}
