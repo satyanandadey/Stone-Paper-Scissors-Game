@@ -93,56 +93,60 @@ button:hover{
     right:20px;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-/* This code only activates when the screen is 600px wide or smaller */
 
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 600px) {
-    /* 1. Shrink the gap between the images and make them slightly smaller */
+    /* 1. Make the images bigger and push them down dynamically */
     .choices {
-        gap: 0.5rem; 
-        margin-top: 1.5rem;
+        gap: 1rem; 
+        margin-top: 10vh; /* Pushes down by 10% of the screen height */
     }
 
     .choice {
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
     }
 
     img {
-        height: 80px;
-        width: 80px;
+        height: 95px;
+        width: 95px;
     }
 
-    /* 2. Bring the scores closer together and reduce font size */
+    /* 2. Space out the scoreboard and make numbers larger */
     .scoreboard {
-        gap: 2rem; 
-        margin-top: 2.5rem;
-        font-size: 1.5rem;
+        gap: 3rem; 
+        margin-top: 8vh;
+        font-size: 1.8rem;
     }
 
     #user-score, #comp-score {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    /* 3. Adjust spacing for the message and button */
+    /* 3. Give the message box breathing room */
     .msg-container {
-        margin-top: 2.5rem;
+        margin-top: 8vh;
     }
 
     #msg {
         font-size: 1.2rem;
-        display: inline-block; /* Forces the background to stay as one solid shape */
-        line-height: 1.5;      /* Adds a little breathing room between the two lines of text */
-        max-width: 90%;        /* Prevents the red/green box from touching the very edges of the screen */
+        display: inline-block; 
+        line-height: 1.5;      
+        max-width: 90%;        
+        padding: 0.8rem; 
     }
 
+    /* 4. Make the button slightly thicker for easy thumb tapping */
     button {
-        margin-top: 1.5rem;
+        margin-top: 8vh;
+        height: 3.5rem;
+        width: 12rem;
+        font-size: 1.5rem;
     }
 
-    /* 4. Make the signature smaller so it doesn't overlap other elements */
     .signature {
         font-size: 1.2rem;
         right: 10px;
+        bottom: 10px;
     }
 }
