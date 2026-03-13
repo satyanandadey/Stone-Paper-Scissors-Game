@@ -1,6 +1,10 @@
 let userScore=0;
 let compScore=0;
 
+const winSound = new Audio("win.mp3");
+const loseSound = new Audio("lose.mp3");
+const drawSound= new Audio("draw.mp3");
+
 const choices=document.querySelectorAll(".choice");
 const msg=document.querySelector("#msg");
 const userScoreNum=document.querySelector("#user-score");
@@ -14,6 +18,7 @@ const genCompChoice=() => {
 };
 
 const drawGame=() => {
+    drawSound.play();
     msg.innerText="Game Was Draw😐";
     msg.style.backgroundColor="#1B263B";
 };
@@ -21,12 +26,14 @@ const drawGame=() => {
 const showWinner=(userWin,userChoice,compChoice) => {
     if(userWin){
         userScore++;
+        winSound.play();
         msg.innerText=`Yaa!! You Win👍,Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor="green";
         userScoreNum.innerText=userScore;
     }
     else{
         compScore++;
+        loseSound.play();
         msg.innerText=`You Lose😒Better Luck Next Time,${compChoice} beats your ${userChoice}`;
         msg.style.backgroundColor="red";
         compScoreNum.innerText=compScore;
