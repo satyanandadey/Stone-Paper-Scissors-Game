@@ -1,9 +1,9 @@
 let userScore=0;
 let compScore=0;
 
-const winSound = new Audio("win.mp3");
-const loseSound = new Audio("lose.mp3");
-const drawSound= new Audio("draw.mp3");
+// const winSound = new Audio("win.mp3");
+// const loseSound = new Audio("lose.mp3");
+// const drawSound= new Audio("draw.mp3");
 
 const choices=document.querySelectorAll(".choice");
 const msg=document.querySelector("#msg");
@@ -18,7 +18,7 @@ const genCompChoice=() => {
 };
 
 const drawGame=() => {
-    drawSound.play();
+    // drawSound.play();
     msg.innerText="Game Was Draw😐";
     msg.style.backgroundColor="#1B263B";
 };
@@ -26,14 +26,14 @@ const drawGame=() => {
 const showWinner=(userWin,userChoice,compChoice) => {
     if(userWin){
         userScore++;
-        winSound.play();
+        // winSound.play();
         msg.innerText=`Yaa!! You Win👍,Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor="green";
         userScoreNum.innerText=userScore;
     }
     else{
         compScore++;
-        loseSound.play();
+        //loseSound.play();
         msg.innerText=`You Lose😒Better Luck Next Time,${compChoice} beats your ${userChoice}`;
         msg.style.backgroundColor="red";
         compScoreNum.innerText=compScore;
@@ -65,8 +65,9 @@ const playGame=(userChoice) => {
     }
 };
 
-choices.forEach((choice) => {                            // the argument choice not have to be same as class name                                            
-        choice.addEventListener("click",()=>{            //So i can use "choic" instead of "choice" 
+choices.forEach((choice) => {          // the argument choice not have to be same as class name
+
+        choice.addEventListener("click",()=>{         //So i can use "choic" instead of "choice" 
         const userChoice=choice.getAttribute("id");
         playGame(userChoice);
     });
